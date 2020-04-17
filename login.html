@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Student Information System</title>
+  <meta charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <ul class="navigation">
+        <li><a>Student Information System</a></li>
+        <li style="padding-left: 50%;"><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="./reg.html">Register Yourself</a></li>
+        <!-- <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li> -->
+    </ul>
+  <!-- <div class="container" style ="margin-left:auto; margin-right:auto;"> -->
+    <div style="float: left; margin-left:15%;  margin-right:auto;">
+      <form id="registration" method = 'POST' action = 'logins.php'>
+        <h1>Student Login</h1>
+        <div class="login">
+          <label for="username">
+            <span>Username</span>
+            <input type="text" name = "username" id="username" minlength="3" required>
+            <ul class="input-requirements">
+              <li>At least 3 characters long</li>
+              <li>Must only contain letters and numbers (no special characters)</li>
+            </ul>
+          </label>
+          <label for="password">
+            <span>Password</span>
+            <input type="password" name = "password" id="password" maxlength="100" minlength="8" required>
+            <ul class="input-requirements">
+              <li>At least 8 characters long (and less than 100 characters)</li>
+              <li>Contains at least 1 number</li>
+              <li>Contains at least 1 lowercase letter</li>
+              <li>Contains at least 1 uppercase letter</li>
+              <li>Contains a special character (e.g. @ !)</li>
+            </ul>
+          </label>
+          <br>
+          <input class="btn" type="submit" style="margin-left: 35%;">
+          <br>
+          <a href="./reg.html">Don't have account, Make one!!</a><br>
+		  <a href="./forgot_pswd.html">Forgot Password!!</a>
+        </div>
+      </form>
+    </div>
+    <div style="float: right; margin-right:15%; margin-left:auto;">
+      <h1>Admin Login</h1>
+      <form class="login" id="registration1"  method = 'POST' action = 'adminlogin.php'>
+        <label for="username1">
+          <span>Username</span>
+          <input type="text" name="username1" id="username1" minlength="3" required>
+          <ul class="input-requirements">
+            <li>At least 3 characters long</li>
+            <li>Must only contain letters and numbers (no special characters)</li>
+          </ul>
+        </label>
+        <label for="password1">
+          <span>Password</span>
+          <input type="password" name="password1" id="password1" maxlength="100" minlength="2" required>
+          <ul class="input-requirements">
+            <li>At least 8 characters long (and less than 100 characters)</li>
+            <li>Contains at least 1 number</li>
+            <li>Contains at least 1 lowercase letter</li>
+            <li>Contains at least 1 uppercase letter</li>
+            <li>Contains a special character (e.g. @ !)</li>
+          </ul>
+        </label>
+        <br>
+        <input class="btn" name = "submit1" type="submit" style="margin-left: 35%;">
+      </form>
+    </div>
+  <!-- </div> -->
+
+  <script src="script.js"></script>
+</body>
+</html>
